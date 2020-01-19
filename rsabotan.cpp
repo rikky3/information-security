@@ -44,7 +44,7 @@ std::string hex2text(std::string hptd)
 
 int main(int argc, char* argv[])
 {
-	std::unique_ptr<Botan::RandomNumberGenerator> rng(new Botan::AutoSeeded_RNG);
+	std::unique_ptr<Botan::RandomNumberGenerator> rng(new Botan::AutoSeeded_RNG);	//smart pointer
 	char c;
 	
 	std::unique_ptr<Botan::Private_Key> kp(Botan::PKCS8::load_key(argv[1], *rng)); 	//load keypair
